@@ -1,4 +1,4 @@
-package com.majority.contactbookapi.config.validate;
+package com.majority.contactbookapi.dto;
 
 public class JsonParseErrorDto {
 
