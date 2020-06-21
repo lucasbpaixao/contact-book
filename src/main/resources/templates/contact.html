@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Agenda de Contatos </title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/js/bootstrap.min.js">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="jumbotron">
+    <form>
+
+        <h3>Informações do contato</h3>
+        <div class="form-group">
+            <label for="contactName">Nome:</label>
+            <input type="text" class="form-control" id="contactName" placeholder="Nome do contato">
+        </div>
+
+        <div class="form-group">
+            <label for="contactEmail">E-mail:</label>
+            <input type="email" class="form-control" id="contactEmail" placeholder="E-mail do contato">
+        </div>
+
+        <div class="form-group">
+            <label for="contactPhoneNumber">Telefone:</label>
+            <input type="text" class="form-control" id="contactPhoneNumber" placeholder="Telefone do contato">
+        </div>
+
+        <button type="button" id="btnSubmit" onclick="extractDataFromForm()" class="btn btn-primary">Salvar</button>
+    </form>
+</div>
+</div>
+
+<script src="js/contact.js">
+</script>
+
+</body>
+</html>

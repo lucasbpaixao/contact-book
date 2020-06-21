@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/contact_book")
-public class ContactBookController {
+public class ContactBookRestController {
 
 
     @Autowired
