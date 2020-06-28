@@ -7,6 +7,8 @@
   <title>Agenda de Contatos </title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/bootstrap/js/bootstrap.min.js">
+  <link rel="stylesheet" href="lib/materialize/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -14,15 +16,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
+
+    <script src="lib/materialize/js/materialize.min.js"></script>
 </head>
 
 <body onload="get()">
   <div class="container mt-5">
     <h1>Meus Contatos</h1>
     <br>
-    <div class="list-group" id="list">
-    </div>
-
+        <div class="list-group" id="list">
+        </div>
+    <a class="btn-floating btn-large black float-right mt-5" onclick="window.location.replace('contact')"><i class="large material-icons">add</i></a>
   </div>
 
   <script src="js/index.js">

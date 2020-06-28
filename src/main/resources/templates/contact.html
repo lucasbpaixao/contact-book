@@ -7,6 +7,8 @@
     <title>Agenda de Contatos </title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="lib/materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -14,26 +16,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
+
+    <script src="lib/materialize/js/materialize.min.js"></script>
 </head>
 
 <body>
 <div class="jumbotron">
+
+    <div class="row">
     <form>
 
         <h3>Informações do contato</h3>
-        <div class="form-group">
-            <label for="contactName">Nome:</label>
-            <input type="text" class="form-control" id="contactName" placeholder="Nome do contato">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="contactName" type="text" class="validate">
+            <label for="contactName">Nome</label>
         </div>
 
-        <div class="form-group">
-            <label for="contactEmail">E-mail:</label>
-            <input type="email" class="form-control" id="contactEmail" placeholder="E-mail do contato">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">email</i>
+            <input id="contactEmail" type="email" class="validate">
+            <label for="contactEmail">Email</label>
         </div>
 
-        <div class="form-group">
-            <label for="contactPhoneNumber">Telefone:</label>
-            <input type="text" class="form-control" id="contactPhoneNumber" placeholder="Telefone do contato">
+
+        <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="contactPhoneNumber" type="text" class="validate">
+            <label for="contactPhoneNumber">Telefone</label>
         </div>
 
         <button type="button" id="btnSubmit" onclick="extractDataFromForm()" class="btn btn-primary">Salvar</button>
