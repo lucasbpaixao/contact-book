@@ -1,7 +1,6 @@
 package com.majority.contactbookapi.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,8 +13,8 @@ public class ContactBookAppController {
         return "index.html";
     }
 
-    @RequestMapping("/contact")
-    public String contact() {
+    @RequestMapping("/contact/{id}")
+    public String contact(@PathVariable int id) {
 
         return "contact.html";
     }

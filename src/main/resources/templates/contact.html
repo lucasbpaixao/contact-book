@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Agenda de Contatos </title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/bootstrap/js/bootstrap.min.js">
-    <link rel="stylesheet" href="lib/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="/lib/materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -17,41 +17,50 @@
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
 
-    <script src="lib/materialize/js/materialize.min.js"></script>
+    <script src="/lib/materialize/js/materialize.min.js"></script>
 </head>
 
-<body>
-<div class="jumbotron">
+<body onload="extractContactId()">
+<div class="container">
+    <i class="half material-icons" style="cursor: pointer;" onclick="window.location.replace('../../')">arrow_back</i>
+<div class="jumbotron mt-5">
 
-    <div class="row">
+
     <form>
-
+        <input id="contactId" type="text" hidden="true">
         <h3>Informações do contato</h3>
+        <br>
+
+        <div id="alert">
+        </div>
+
+        <br>
         <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input id="contactName" type="text" class="validate">
-            <label for="contactName">Nome</label>
+            <label for="contactName" id="labelName">Nome</label>
         </div>
 
         <div class="input-field col s6">
             <i class="material-icons prefix">email</i>
             <input id="contactEmail" type="email" class="validate">
-            <label for="contactEmail">Email</label>
+            <label for="contactEmail" id="labelEmail">Email</label>
         </div>
 
 
         <div class="input-field col s6">
             <i class="material-icons prefix">phone</i>
             <input id="contactPhoneNumber" type="text" class="validate">
-            <label for="contactPhoneNumber">Telefone</label>
+            <label for="contactPhoneNumber" id="labelPhoneNumber">Telefone</label>
         </div>
 
-        <button type="button" id="btnSubmit" onclick="extractDataFromForm()" class="btn btn-primary">Salvar</button>
+        <button type="button" id="btnSubmit" onclick="extractDataFromForm()" class="btn btn-primary mt-5 float-right">Salvar</button>
     </form>
+
 </div>
 </div>
 
-<script src="js/contact.js">
+<script src="/js/contact.js">
 </script>
 
 </body>
