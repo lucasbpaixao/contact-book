@@ -35,7 +35,9 @@ async function post(contact) {
     });
 
     if(res.status == 201){
+        window.location.replace('../../');
         showMessage('Contato Cadastrado com Sucesso!', 'success');
+
     }else{
         showMessage('Não foi Possivel Cadastrar o Contato!', 'danger')
     }
@@ -59,6 +61,7 @@ async function put(id, contact) {
     });
 
     if(res.status == 200){
+        window.location.replace('../../');
         showMessage('Contato Alterado com Sucesso!', 'success');
     }else{
         showMessage('Não foi Possivel Alterar o Contato!', 'danger')
@@ -67,7 +70,7 @@ async function put(id, contact) {
 
 function showMessage(message, type){
     const alert = document.getElementById("alert");
-
+    alert.innerHTML = '';
     alert.insertAdjacentHTML('beforeend', alertTemplate(message, type));
 }
 

@@ -35,7 +35,7 @@ public class ContactBookRestController {
 
     @GetMapping
     public ResponseEntity<List<Contact>> getAllContacts(){
-        List<Contact> contacts = repository.findAll();
+        List<Contact> contacts = repository.findAllByOrderByNameAsc();
 
         return ResponseEntity.ok(contacts);
     }

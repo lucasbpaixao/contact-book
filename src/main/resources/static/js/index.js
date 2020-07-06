@@ -21,6 +21,8 @@ function listContacts(promise){
 function updateListOnView(contacts){
     const list = document.getElementById('list');
 
+    list.innerHTML = '';
+
     if(contacts.length == 0){
         list.insertAdjacentHTML('beforeend', '<h4>Não há contatos registrados no banco de dados!</h4>');
     }else{
@@ -32,8 +34,8 @@ function template(contacts){
     return `
     ${contacts.map(contact =>
         `
-             <div class="list-group-item list-group-item-action" id="contact${contact.id}">
-                <img src="imgs/pessoa.png" style="height: 40px; width: 40px; cursor: pointer;" class="mr-2 rounded-circle" onclick="viewContact(${contact.id})"> ${contact.name}
+             <div  onclick="viewContact(${contact.id})" class="list-group-item list-group-item-action" style="cursor: pointer;" id="contact${contact.id}">
+                <img src="imgs/pessoa.png" style="height: 40px; width: 40px;" class="mr-2 rounded-circle"> ${contact.name}
                 <i class="material-icons float-right" style="cursor: pointer;" onclick="deleteContact(${contact.id})">delete</i>
              </div>
          `
@@ -43,6 +45,9 @@ function template(contacts){
 
 async function deleteContact(id){
 
+    console.log('excluindo');
+
+    document.getElementById("contact"+id).removeAttribute('onclick');
     const host = window.location.host;
     const protocol = window.location.protocol;
 
@@ -54,18 +59,14 @@ async function deleteContact(id){
 
     if(res.status == 200){
         showMessage('Contato Excluido com Sucesso!', 'success');
-        removeElement(id);
+        get();
     }else{
-        showMessage('Não foi Possivel Excluir o Contato!', 'danger')
+        showMessage('Não foi Possivel Excluir o Contato!', 'danger');
+        get();
     }
 }
 
-function removeElement(id){
-    const node = document.getElementById("contact"+id);
-
-    node.parentNode.removeChild(node);
-}
-
 function viewContact(id){
+    console.log('abrindo');
     window.location.replace('contact/'+id);
 }
