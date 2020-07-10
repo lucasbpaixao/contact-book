@@ -39,6 +39,7 @@ async function post(contact) {
         showMessage('Contato Cadastrado com Sucesso!', 'success');
 
     }else{
+        console.log(res);
         showMessage('Não foi Possivel Cadastrar o Contato!', 'danger')
     }
 
