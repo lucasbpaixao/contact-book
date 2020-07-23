@@ -27,7 +27,7 @@ public class FormErrorHandler {
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public List<FormErrorDto> errorHandler(MethodArgumentNotValidException exception){
-        List<FormErrorDto> formErrorDtos = new ArrayList<>();
+        List<FormErrorDto> formErrorsDto = new ArrayList<>();
 
         List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
 
@@ -36,10 +36,10 @@ public class FormErrorHandler {
 
             FormErrorDto formErrorDto = new FormErrorDto(field.getField(), message);
 
-            formErrorDtos.add(formErrorDto);
+            formErrorsDto.add(formErrorDto);
         });
 
-        return formErrorDtos;
+        return formErrorsDto;
     }
 
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)

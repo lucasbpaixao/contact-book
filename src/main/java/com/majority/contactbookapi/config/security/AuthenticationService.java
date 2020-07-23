@@ -26,4 +26,20 @@ public class AuthenticationService implements UserDetailsService {
 
         throw new UsernameNotFoundException("Dados Invalidos");
     }
+
+
+    /*
+    
+    Boa noite, tudo bem?
+
+    Queria fazer um pedido
+
+    Vou querer:
+    1 Jantinha
+    3 Medalhões de Frango
+    1 Pão de alho
+    
+    */
 }
+
+
