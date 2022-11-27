@@ -15,7 +15,16 @@ public class ContactBookAppController {
 
     @RequestMapping("/contact/{id}")
     public String contact(@PathVariable int id) {
-
         return "contact.html";
+    }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "login.html";
+    }
+
+    @RequestMapping("/create_account")
+    public String create_account(){
+        return "create_account.html";
     }
 }

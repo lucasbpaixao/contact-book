@@ -1,6 +1,6 @@
 package com.majority.contactbookapi.config.security;
 
-import com.majority.contactbookapi.model.User;
+import com.majority.contactbookapi.model.UserAccount;
 import com.majority.contactbookapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,7 +18,7 @@ public class AuthenticationService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Optional<User> optional = repository.findByLogin(login);
+        Optional<UserAccount> optional = repository.findByLogin(login);
 
         if(optional.isPresent()){
             return optional.get();

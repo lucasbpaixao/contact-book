@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Crie sua Conta</title>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+    </head>
+    <body class="bg-dark text-white">
+       <div class="container">
+        <form class="form-signin" method="post" action="/login">
+          <h2 class="form-signin-heading">Crie sua Conta</h2>
+          <br>
+          <div id="alert">
+          </div>
+          <p>
+            <label for="name" class="sr-only">Nome de Exibição</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Nome de Exibição" required autofocus>
+          </p>
+          <p>
+            <label for="username" class="sr-only">Login</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Login" required autofocus>
+          </p>
+          <p>
+            <label for="password" class="sr-only">Senha</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Senha" required>
+          </p>
+          <p>
+            <label for="confirmPassword" class="sr-only">Confirme sua Senha</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirme sua Senha" required>
+          </p>
+          <br>
+          <button class="btn btn-lg btn-primary btn-block" type="button" onclick="extractDataFromForm()">Criar Conta</button>
+          <br>
+          <p style="text-align: center;">
+            <a href="../login">Login</a>
+          </p>
+        </form>
+      </div>
+    </body>
+
+    <script src="/js/create_account.js">
+    </script>
+    
+  </html>

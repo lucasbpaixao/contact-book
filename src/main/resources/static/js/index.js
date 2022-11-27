@@ -24,7 +24,7 @@ function updateListOnView(contacts){
     list.innerHTML = '';
 
     if(contacts.length == 0){
-        list.insertAdjacentHTML('beforeend', '<h4>Não há contatos registrados no banco de dados!</h4>');
+        list.insertAdjacentHTML('beforeend', '<h4>Você Não Possui Contatos!</h4>');
     }else{
         list.insertAdjacentHTML('beforeend', template(contacts));
     }

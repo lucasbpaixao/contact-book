@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
-public class User implements UserDetails {
+public class UserAccount implements UserDetails {
 
     /**
      *
@@ -28,6 +28,10 @@ public class User implements UserDetails {
 
     public String getName() {
         return name;
+    }
+
+    public Long getId() {
+        return this.id;
     }
 
     public void setName(String name) {
